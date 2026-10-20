@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Sagar Cafe</title>
+    <link rel="stylesheet" href="cafe.css">
+</head>
+
+<body>
+
+<div class="cafenavbar">
+    <a href="sagarindex.html">Home</a>
+    <a href="sagarabout.html">About</a>
+    <a href="sagarmenu.html">Menu</a>
+    <a href="sagarhours.html">Hours</a>
+    <a href="sagarcontact.html">Contact</a>
+    <a href="sagarcart.html">Cart 🛒</a>
+</div>
+
+<div class="contact">
+
+    <div class="contactheading">
+        <p class="contacttag">WE'D LOVE TO HEAR FROM YOU</p>
+        <h1>Let's Connect ☕</h1>
+        <p>
+            Have a question or planning a visit?
+            We'd love to hear from you!
+        </p>
+    </div>
+
+    <div class="contactinfo">
+
+        <div class="contactcard">
+            <div class="contacticon">📍</div>
+            <h3>Our Location</h3>
+            <p>Bhopal, Madhya Pradesh</p>
+        </div>
+
+        <div class="contactcard">
+            <div class="contacticon">📞</div>
+            <h3>Call Us</h3>
+            <p>+91 7070070615</p>
+        </div>
+
+        <div class="contactcard">
+            <div class="contacticon">✉️</div>
+            <h3>Email Us</h3>
+            <p>sagarcafe@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="contactforms">
+
+        <div class="contactbox">
+            <h2>Send Us a Message 💌</h2>
+            <p class="formdescription">
+                Tell us what's on your mind.
+            </p>
+
+            <form onsubmit="sendMessage(event)">
+
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Message</label>
+                <textarea placeholder="Write your message here..."
+                    rows="5" required></textarea>
+
+                <button type="submit">Send Message ✉️</button>
+
+            </form>
+        </div>
+
+        <div class="contactbox">
+            <h2>Book Your Table 🍽️</h2>
+            <p class="formdescription">
+                Reserve your favourite spot at Sagar Cafe.
+            </p>
+
+            <form onsubmit="bookTable(event)">
+
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+
+                <label>Mobile Number</label>
+                <input type="tel" placeholder="Enter mobile number"
+                    pattern="[0-9]{10}" maxlength="10" required>
+
+                <div class="bookingrow">
+                    <div>
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+
+                    <div>
+                        <label>Time</label>
+                        <input type="time" required>
+                    </div>
+                </div>
+
+                <label>Number of Guests</label>
+                <input type="number" min="1" max="20"
+                    placeholder="How many guests?" required>
+
+                <button type="submit">Book My Table 🍽️</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div class="contactthanks">
+        <h2>Good Coffee. Great Conversations. ❤️</h2>
+        <p>We look forward to welcoming you to Sagar Cafe!</p>
+    </div>
+
+
+<div class="contactmap">
+
+    <h2>Find Us Here 📍</h2>
+    <p>Visit us at Sagar Cafe's location in Bhopal.</p>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111456.59171311227!2d77.1876450972656!3d23.303916899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c6650df25ad15%3A0x50c6581fbb7c9940!2sSagar%20Group%20of%20Institutions%20-%20SISTec!5e1!3m2!1sen!2sin!4v1792415664523!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        style="border:0; border-radius:15px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+
+</div>
+
+
+</div>
+
+<div class="footer">
+    © 2026 Sagar Cafe
+</div>
+
+<script src="cafe.js"></script>
+
+</body>
+</html>
+```

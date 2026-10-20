@@ -1,0 +1,888 @@
+
+/* ==================================================
+   1. COMMON CSS - ALL PAGES
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 40px;
+    color: brown;
+}
+
+p {
+    font-size: 18px;
+    color: black;
+}
+
+/* Navbar */
+
+.cafenavbar {
+    background-color: brown;
+    text-align: center;
+    padding: 15px;
+}
+
+.cafenavbar a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 8px;
+}
+
+.cafenavbar a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Common buttons */
+
+button {
+    background-color: brown;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: black;
+}
+
+/* Footer */
+
+.footer {
+    background-color: burlywood;
+    color: brown;
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+    width: 100%;
+}
+
+
+/* ==================================================
+   2. HOME PAGE - sagarindex.html
+================================================== */
+
+.hero {
+    padding: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.content {
+    text-align: center;
+    padding: 23px 110px;
+}
+
+
+/* ==================================================
+   3. ABOUT PAGE - sagarabout.html
+================================================== */
+
+.about {
+    text-align: center;
+    padding: 109px;
+    background-color: beige;
+    color: black;
+    min-height: 100px;
+}
+
+.img {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.aboutimages {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+/* ==================================================
+   4. MENU PAGE - sagarmenu.html
+================================================== */
+
+/* Main menu container */
+
+.menu {
+    text-align: center;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 30px;
+}
+
+.menu h1 {
+    margin: 25px 0;
+}
+
+/* Category buttons */
+
+.menubuttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Menu categories: 4 items per row */
+
+.tea,
+.coffee,
+.burger,
+.sandwich,
+.noodles,
+.pizza,
+.soft {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+}
+
+/* Each menu card */
+
+.tea .menuitem,
+.coffee .menuitem,
+.burger .menuitem,
+.sandwich .menuitem,
+.noodles .menuitem,
+.pizza .menuitem,
+.soft .menuitem {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menuitem:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu images */
+
+.menu .menuitem img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: 160px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Item name and price */
+
+.itembox {
+    background-color: lightpink;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.itembox h3 {
+    color: black;
+    font-size: 17px;
+    margin: 5px;
+}
+
+.itembox p {
+    color: black;
+    margin: 5px;
+    font-size: 16px;
+}
+
+/* Add to Cart button */
+
+.addToCartBtn {
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+
+/* ==================================================
+   5. CART PAGE - sagarcart.html
+================================================== */
+
+/* Cart items grid */
+
+#cartItems {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Cart item container */
+
+#cartItems .cartItem {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Cart card */
+
+#cartItems .menuitem {
+    width: 100%;
+    min-width: 0;
+    padding: 15px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart images */
+
+#cartItems .menuitem img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Cart item name */
+
+#cartItems .menuitem h3 {
+    color: #8b4513;
+    margin: 10px 0;
+}
+
+/* Quantity buttons */
+
+.quantityBtn {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.quantityBtn:hover {
+    background-color: #5c2e0b;
+}
+
+
+/* ===== Sagar Cafe Cart Styling ===== */
+
+.empty-cart {
+    text-align: center;
+    background: #fff8ed;
+    padding: 35px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 2px dashed #d97706;
+}
+
+.empty-cart h2 {
+    color: #8b4513;
+}
+
+.empty-cart p {
+    color: #666;
+    font-size: 17px;
+}
+
+.empty-cart a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    background: #8b4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.empty-cart a:hover {
+    background: #c05621;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fffaf2;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #00000015;
+}
+
+.cart-item img {
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-details h3 {
+    color: #8b4513;
+    margin-top: 0;
+}
+
+.cart-details button {
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 6px;
+    background: #8b4513;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-details button:hover {
+    background: #c05621;
+}
+
+#totalPrice {
+    color: #8b4513;
+    text-align: right;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    .cart-item {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .cart-item img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+
+/* ==================================================
+   6. HOURS PAGE - sagarhours.html
+================================================== */
+
+.hours {
+    width: calc(100% - 30px);
+    max-width: 650px;
+    min-height: 400px;
+    margin: 55px auto;
+    padding: 35px;
+    background: linear-gradient(145deg, #fffaf4, #f4e1cd);
+    border: 1px solid #ead4bf;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(70, 40, 20, 0.12);
+    color: #5d3425;
+    text-align: center;
+}
+
+.hoursicon {
+    font-size: 45px;
+    text-align: center;
+}
+
+.hourstag {
+    color: #93613f;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.hours h1 {
+    font-size: 35px;
+    margin: 12px 0;
+    color: #5d3425;
+    text-align: center;
+}
+
+.hoursintro {
+    color: #806b60;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+/* Opening time rows */
+
+.hourrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 12px;
+    margin: 10px 0;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid #9b633f;
+    transition: transform 0.2s;
+}
+
+.hourrow:hover {
+    transform: translateX(4px);
+}
+
+.hourrow span:first-child {
+    font-weight: bold;
+}
+
+.hourrow span:last-child {
+    text-align: right;
+}
+
+/* Closing message */
+
+.hoursnote {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #dfc4ad;
+    color: #75452d;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* ==================================================
+   7. CONTACT PAGE - sagarcontact.html
+================================================== */
+
+.contact {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #3e2723;
+    text-align: center;
+    background-color: beige;
+}
+
+/* Contact heading */
+
+.contactheading {
+    text-align: center;
+    padding: 35px 15px;
+    background: linear-gradient(135deg, #fff3e0, #f5dfc5);
+    border-radius: 18px;
+    margin-bottom: 30px;
+}
+
+.contacttag {
+    color: #9b633f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contactheading h1 {
+    font-size: 42px;
+    margin: 12px 0;
+    color: #5d3425;
+}
+
+.contactheading p {
+    line-height: 1.7;
+}
+
+/* Location, phone and email cards */
+
+.contactinfo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.contactcard {
+    background: white;
+    text-align: center;
+    padding: 25px 12px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(80, 50, 30, 0.10);
+    border: 1px solid #f0e0d0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contactcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(80, 50, 30, 0.16);
+}
+
+.contacticon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contactcard h3 {
+    margin: 8px 0;
+    color: #75452d;
+}
+
+.contactcard p {
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+/* Contact forms */
+
+.contactforms {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+.contactbox {
+    min-width: 0;
+    background: #fffdf9;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(80, 50, 30, 0.10);
+    border: 1px solid #f0e0d0;
+    text-align: left;
+}
+
+.contactbox h2 {
+    color: #5d3425;
+    margin-top: 0;
+    font-size: 23px;
+}
+
+.formdescription {
+    color: #806b60;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* Form labels */
+
+.contactbox form label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Form inputs and text areas */
+
+.contactbox form input,
+.contactbox form textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ddc9b7;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+.contactbox form input:focus,
+.contactbox form textarea:focus {
+    outline: none;
+    border-color: #9b633f;
+    box-shadow: 0 0 0 3px rgba(155, 99, 63, 0.12);
+}
+
+.contactbox form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Form buttons */
+
+.contactbox form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #75452d;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contactbox form button:hover {
+    background: #4e2b1d;
+}
+
+/* Booking date and time */
+
+.bookingrow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.bookingrow input {
+    min-width: 0;
+}
+
+/* Contact closing message */
+
+.contactthanks {
+    text-align: center;
+    margin: 35px 0 10px;
+    padding: 20px;
+    background: #fff3e0;
+    border-radius: 12px;
+}
+
+.contactthanks h2 {
+    color: #75452d;
+}
+
+.contactthanks p {
+    color: #806b60;
+}
+
+/* Google Map */
+
+.contactmap {
+    margin: 35px 0;
+    padding: 25px;
+    background: #fffdf9;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(80, 50, 30, 0.10);
+    text-align: center;
+}
+
+.contactmap h2 {
+    color: #5d3425;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contactmap p {
+    color: #806b60;
+    margin-bottom: 20px;
+}
+
+.contactmap iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+    pointer-events: auto;
+}
+
+
+/* ==================================================
+   8. RESPONSIVE DESIGN - TABLETS
+================================================== */
+
+@media (max-width: 900px) {
+    .tea,
+    .coffee,
+    .burger,
+    .sandwich,
+    .noodles,
+    .pizza,
+    .soft,
+    #cartItems {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .contactinfo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==================================================
+   9. RESPONSIVE DESIGN - MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+    .cafenavbar {
+        padding: 10px 5px;
+    }
+
+    .cafenavbar a {
+        padding: 8px 5px;
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .content {
+        padding: 20px 15px;
+    }
+
+    .about {
+        padding: 30px 15px;
+    }
+
+    .aboutimages {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .img {
+        max-width: 100%;
+    }
+
+    /* Menu: 2 cards per row on mobile */
+
+    .menu {
+        padding: 0 10px 20px;
+    }
+
+    .tea,
+    .coffee,
+    .burger,
+    .sandwich,
+    .noodles,
+    .pizza,
+    .soft,
+    #cartItems {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .tea .menuitem,
+    .coffee .menuitem,
+    .burger .menuitem,
+    .sandwich .menuitem,
+    .noodles .menuitem,
+    .pizza .menuitem,
+    .soft .menuitem {
+        padding: 8px;
+    }
+
+    .menu .menuitem img {
+        height: 120px;
+    }
+
+    .itembox h3 {
+        font-size: 14px;
+    }
+
+    .itembox p {
+        font-size: 14px;
+    }
+
+    .menubuttons {
+        gap: 8px;
+    }
+
+    .menubuttons button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* Cart */
+
+    #cartItems {
+        padding: 10px;
+    }
+
+    #cartItems .menuitem {
+        padding: 8px;
+    }
+
+    #cartItems .menuitem img {
+        height: 110px;
+    }
+
+    /* Hours */
+
+    .hours {
+        width: calc(100% - 24px);
+        margin: 25px 12px;
+        padding: 22px 15px;
+    }
+
+    .hours h1 {
+        font-size: 29px;
+    }
+
+    .hourrow {
+        font-size: 13px;
+        padding: 15px 10px;
+    }
+
+    /* Contact */
+
+    .contact {
+        padding: 12px;
+        margin: 20px auto;
+    }
+
+    .contactinfo,
+    .contactforms {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contactheading {
+        padding: 25px 12px;
+    }
+
+    .contactheading h1 {
+        font-size: 30px;
+    }
+
+    .contactbox {
+        padding: 18px;
+    }
+
+    .bookingrow {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
